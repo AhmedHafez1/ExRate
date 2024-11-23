@@ -1,12 +1,16 @@
-using CurrencyService.DTOs;
 using Microsoft.AspNetCore.SignalR;
 
 namespace CurrencyService.Hubs;
 
 public class RatesHub : Hub
 {
-    public async Task SendRateUpdates(ExchangeRatesDto rates)
+    public async Task JoinGroup(string currency)
     {
-        await Clients.All.SendAsync("ReceiveRates", rates);
+        await Groups.AddToGroupAsync(Context.ConnectionId, currency);
+    }
+
+    public async Task LeaveGroup(string currency)
+    {
+        await Groups.RemoveFromGroupAsync(Context.ConnectionId, currency);
     }
 }
