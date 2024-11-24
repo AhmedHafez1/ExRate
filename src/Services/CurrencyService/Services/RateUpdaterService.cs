@@ -1,4 +1,4 @@
-using System.Net;
+using CurrencyService.Config;
 using CurrencyService.Contracts;
 using CurrencyService.Hubs;
 using Microsoft.AspNetCore.SignalR;
@@ -10,36 +10,31 @@ public class RateUpdaterService : BackgroundService
     private readonly IExchangeRateService _rateService;
     private readonly IHubContext<RatesHub> _hubContext;
     private readonly ILogger<RateUpdaterService> _logger;
-    private readonly IConfiguration _config;
     private readonly TimeSpan _updateInterval = TimeSpan.FromSeconds(30);
 
     public RateUpdaterService(
         IExchangeRateService rateService,
         IHubContext<RatesHub> hubContext,
-        ILogger<RateUpdaterService> logger,
-        IConfiguration config
+        ILogger<RateUpdaterService> logger
     )
     {
         _rateService = rateService;
         _hubContext = hubContext;
         _logger = logger;
-        _config = config;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        var currencies = _config.GetSection("Currencies").Get<string[]>();
-
         while (!stoppingToken.IsCancellationRequested)
         {
-            foreach (var currency in currencies)
+            foreach (var currency in CurrencyConfig.RealTimeCurrencies)
             {
                 try
                 {
                     var updatedRates = await _rateService.GetExchangeRatesAsync(currency);
                     await _hubContext.Clients.Group(currency).SendAsync(currency, updatedRates);
                     _logger.LogInformation(
-                        $"Last Updated data for {currency} at {DateTime.UtcNow}"
+                        $"Last Updated data for {currency} at {updatedRates.Date}"
                     );
                 }
                 catch (Exception ex)
@@ -48,7 +43,7 @@ public class RateUpdaterService : BackgroundService
                 }
 
                 // Add a short delay between requests to avoid overloading the API
-                await Task.Delay(TimeSpan.FromSeconds(3), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(1), stoppingToken);
             }
 
             // Wait for the next update

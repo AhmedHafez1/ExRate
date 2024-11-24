@@ -1,5 +1,4 @@
-using System.Net;
-using System.Text.Json;
+using CurrencyService.Config;
 using CurrencyService.Contracts;
 using CurrencyService.DTOs;
 using Microsoft.Extensions.Caching.Memory;
@@ -11,7 +10,6 @@ public class ExchangeRateService : IExchangeRateService
     private readonly HttpClient _httpClient;
     private readonly ILogger<ExchangeRateService> _logger;
     private readonly string _apiUrl;
-    private readonly string[] _currencies;
     private readonly IMemoryCache _memoryCache;
     private static readonly TimeSpan CacheDuration = TimeSpan.FromMinutes(1);
 
@@ -24,7 +22,6 @@ public class ExchangeRateService : IExchangeRateService
     {
         _httpClient = httpClient;
         _apiUrl = config["CurrencyApiUrl"]!;
-        _currencies = config.GetSection("Currencies").Get<string[]>();
         _memoryCache = memoryCache;
         _logger = logger;
     }
@@ -39,7 +36,7 @@ public class ExchangeRateService : IExchangeRateService
 
         // If not cached, fetch from API and parse
         var exchangeRatesDto = await _httpClient.GetFromJsonAsync<ExchangeRatesDto>(
-            $"{_apiUrl}?base={baseCurrency}&currencies={string.Join(",", _currencies)}"
+            $"{_apiUrl}?base={baseCurrency}&currencies={string.Join(",", CurrencyConfig.Currencies)}"
         );
 
         // Cache the fetched data with expiration time
