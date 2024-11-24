@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CurrencyService.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb76ac424e0f6043ece06c7336174522a7193cbf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c136dc418300a74fa97ceb5053d966f08bbecd81")]
 [assembly: System.Reflection.AssemblyProductAttribute("CurrencyService.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CurrencyService.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
