@@ -1,3 +1,4 @@
+using System.Net;
 using CurrencyService.Contracts;
 using CurrencyService.Hubs;
 using Microsoft.AspNetCore.SignalR;
@@ -28,15 +29,26 @@ public class RateUpdaterService : BackgroundService
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         var currencies = _config.GetSection("Currencies").Get<string[]>();
+
         while (!stoppingToken.IsCancellationRequested)
         {
-            // Update the rates and push the new data to clients
             foreach (var currency in currencies)
             {
-                var updatedRates = await _rateService.GetExchangeRatesAsync(currency);
-                await _hubContext.Clients.Group(currency).SendAsync(currency, updatedRates);
+                try
+                {
+                    var updatedRates = await _rateService.GetExchangeRatesAsync(currency);
+                    await _hubContext.Clients.Group(currency).SendAsync(currency, updatedRates);
+                    _logger.LogInformation(
+                        $"Last Updated data for {currency} at {DateTime.UtcNow}"
+                    );
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, $"Error updating rates for {currency}");
+                }
 
-                _logger.LogInformation($"Last Updated data for {currency} at {updatedRates.Date}");
+                // Add a short delay between requests to avoid overloading the API
+                await Task.Delay(TimeSpan.FromSeconds(3), stoppingToken);
             }
 
             // Wait for the next update

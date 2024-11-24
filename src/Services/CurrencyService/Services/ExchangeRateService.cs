@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text.Json;
 using CurrencyService.Contracts;
 using CurrencyService.DTOs;
@@ -8,6 +9,7 @@ namespace CurrencyService.Services;
 public class ExchangeRateService : IExchangeRateService
 {
     private readonly HttpClient _httpClient;
+    private readonly ILogger<ExchangeRateService> _logger;
     private readonly string _apiUrl;
     private readonly string[] _currencies;
     private readonly IMemoryCache _memoryCache;
@@ -16,13 +18,15 @@ public class ExchangeRateService : IExchangeRateService
     public ExchangeRateService(
         HttpClient httpClient,
         IConfiguration config,
-        IMemoryCache memoryCache
+        IMemoryCache memoryCache,
+        ILogger<ExchangeRateService> logger
     )
     {
         _httpClient = httpClient;
         _apiUrl = config["CurrencyApiUrl"]!;
         _currencies = config.GetSection("Currencies").Get<string[]>();
         _memoryCache = memoryCache;
+        _logger = logger;
     }
 
     public async Task<ExchangeRatesDto> GetExchangeRatesAsync(string baseCurrency)

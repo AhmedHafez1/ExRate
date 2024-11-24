@@ -27,3 +27,15 @@ C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\Cur
 C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
 C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\obj\Debug\net8.0\CurrencyService.csproj.AssemblyReference.cache
 C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\obj\Debug\net8.0\Currency.2B5DBAA9.Up2Date
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\obj\Debug\net8.0\CurrencyService.sourcelink.json
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Microsoft.Extensions.Http.Polly.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Polly.dll
+C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\src\Services\CurrencyService\bin\Debug\net8.0\Polly.Extensions.Http.dll

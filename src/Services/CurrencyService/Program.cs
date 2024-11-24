@@ -1,12 +1,18 @@
+using System.Net;
 using CurrencyService.Contracts;
 using CurrencyService.Hubs;
+using CurrencyService.Policies;
 using CurrencyService.Services;
+using Polly;
+using Polly.Extensions.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddHttpClient<IExchangeRateService, ExchangeRateService>();
+builder
+    .Services.AddHttpClient<IExchangeRateService, ExchangeRateService>()
+    .AddPolicyHandler(HttpPolicies.GetRetryPolicy(builder));
 builder.Services.AddSignalR();
 builder.Services.AddHostedService<RateUpdaterService>();
 builder.Services.AddMemoryCache();
