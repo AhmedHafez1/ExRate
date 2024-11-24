@@ -6,11 +6,11 @@ namespace CurrencyService.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class CurrencyController : ControllerBase
+public class CurrenciesController : ControllerBase
 {
     private readonly IExchangeRateService _exchangeRateService;
 
-    public CurrencyController(IExchangeRateService exchangeRateService)
+    public CurrenciesController(IExchangeRateService exchangeRateService)
     {
         _exchangeRateService = exchangeRateService;
     }
