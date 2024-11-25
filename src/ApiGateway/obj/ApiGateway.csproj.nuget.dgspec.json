@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\ApiGateway\\ApiGateway.csproj": {}
+    "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\ApiGateway\\ApiGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\ApiGateway\\ApiGateway.csproj": {
+    "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\ApiGateway\\ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\ApiGateway\\ApiGateway.csproj",
+        "projectUniqueName": "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\ApiGateway\\ApiGateway.csproj",
         "projectName": "ApiGateway",
-        "projectPath": "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\ApiGateway\\ApiGateway.csproj",
-        "packagesPath": "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\ApiGateway\\obj\\",
+        "projectPath": "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\ApiGateway\\ApiGateway.csproj",
+        "packagesPath": "C:\\Users\\iba1sf\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\iba1sf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,6 +46,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Yarp.ReverseProxy": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -70,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

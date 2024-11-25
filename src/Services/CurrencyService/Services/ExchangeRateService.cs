@@ -11,7 +11,7 @@ public class ExchangeRateService : IExchangeRateService
     private readonly ILogger<ExchangeRateService> _logger;
     private readonly string _apiUrl;
     private readonly IMemoryCache _memoryCache;
-    private static readonly TimeSpan CacheDuration = TimeSpan.FromMinutes(1);
+    private static readonly TimeSpan CacheDuration = TimeSpan.FromSeconds(30);
 
     public ExchangeRateService(
         HttpClient httpClient,
@@ -31,6 +31,7 @@ public class ExchangeRateService : IExchangeRateService
         // Check if the exchange rates are already cached
         if (_memoryCache.TryGetValue(baseCurrency, out ExchangeRatesDto cachedRates))
         {
+            _logger.LogDebug($"Fetched rates from cache for currency {baseCurrency}");
             return cachedRates;
         }
 
@@ -38,6 +39,8 @@ public class ExchangeRateService : IExchangeRateService
         var exchangeRatesDto = await _httpClient.GetFromJsonAsync<ExchangeRatesDto>(
             $"{_apiUrl}?base={baseCurrency}&currencies={string.Join(",", CurrencyConfig.Currencies)}"
         );
+
+        _logger.LogDebug($"Fetched new rates for currency {baseCurrency} with last updated time {exchangeRatesDto.Date} UTC");
 
         // Cache the fetched data with expiration time
         _memoryCache.Set(baseCurrency, exchangeRatesDto, CacheDuration);
