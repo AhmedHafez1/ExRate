@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\Services\\CurrencyService\\CurrencyService.csproj": {}
+    "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\Services\\CurrencyService\\CurrencyService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\Services\\CurrencyService\\CurrencyService.csproj": {
+    "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\Services\\CurrencyService\\CurrencyService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\Services\\CurrencyService\\CurrencyService.csproj",
+        "projectUniqueName": "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\Services\\CurrencyService\\CurrencyService.csproj",
         "projectName": "CurrencyService",
-        "projectPath": "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\Services\\CurrencyService\\CurrencyService.csproj",
-        "packagesPath": "C:\\Users\\iba1sf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iba1sf\\source\\repos\\ExRate\\src\\Services\\CurrencyService\\obj\\",
+        "projectPath": "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\Services\\CurrencyService\\CurrencyService.csproj",
+        "packagesPath": "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\source\\repos\\AhmedHafez1\\ExRate\\src\\Services\\CurrencyService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\iba1sf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahafez.LAPTOP-Q45B39BO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
