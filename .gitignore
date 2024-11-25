@@ -30,6 +30,16 @@ mono_crash.*
 *.log
 *.trace
 
+# Ignore build output
+bin/
+obj/
+
+# Ignore other temporary files
+*.dll
+*.exe
+*.pdb
+*.cache
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
