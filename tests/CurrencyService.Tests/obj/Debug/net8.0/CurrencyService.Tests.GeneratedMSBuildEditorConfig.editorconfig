@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CurrencyService.Tests
-build_property.ProjectDir = C:\Users\ahafez.LAPTOP-Q45B39BO\source\repos\AhmedHafez1\ExRate\tests\CurrencyService.Tests\
+build_property.ProjectDir = C:\Users\iba1sf\source\repos\ExRate\tests\CurrencyService.Tests\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
