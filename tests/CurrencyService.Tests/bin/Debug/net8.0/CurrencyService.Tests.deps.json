@@ -1377,7 +1377,10 @@
           "Microsoft.Extensions.Http.Polly": "8.0.11"
         },
         "runtime": {
-          "CurrencyService.dll": {}
+          "CurrencyService.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

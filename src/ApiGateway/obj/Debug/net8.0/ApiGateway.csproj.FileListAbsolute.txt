@@ -58,3 +58,13 @@ C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\obj\Debug\net8.0\refint\ApiGa
 C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\obj\Debug\net8.0\ApiGateway.pdb
 C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\obj\Debug\net8.0\ApiGateway.genruntimeconfig.cache
 C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\obj\Debug\net8.0\ref\ApiGateway.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Serilog.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\iba1sf\source\repos\ExRate\src\ApiGateway\bin\Debug\net8.0\Serilog.Sinks.File.dll

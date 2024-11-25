@@ -33,9 +33,6 @@ public class RateUpdaterService : BackgroundService
                 {
                     var updatedRates = await _rateService.GetExchangeRatesAsync(currency);
                     await _hubContext.Clients.Group(currency).SendAsync(currency, updatedRates);
-                    _logger.LogInformation(
-                        $"Last Updated data for {currency} at {updatedRates.Date}"
-                    );
                 }
                 catch (Exception ex)
                 {
